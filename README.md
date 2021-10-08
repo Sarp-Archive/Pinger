@@ -1,2 +1,3 @@
 # Pinger
-A Powershell script that ping IP's in a range
+
+A Powershell script that pings IP's in a range.
