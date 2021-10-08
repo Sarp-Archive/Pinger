@@ -2,7 +2,7 @@
 # Made by Segilmez06
 
 # Title
-Write-Host "Pinger v1.0"
+Write-Host "Pinger v1.1"
 Write-Host "Pinger project made by Segilmez06"
 Write-Host " "
 
