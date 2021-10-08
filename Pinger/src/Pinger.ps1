@@ -25,11 +25,11 @@ $lastindex = 5
 $pingcount = 1
 $timeout = 750
 
-if($args[0] -ne $null){$ipbody = $args[0]} else{Write-Host "Error: IP body not defined."; errusg}
-if($args[1] -ne $null){$firstindex = $args[1]} else{Write-Host "Error: First index not defined."; errusg}
-if($args[2] -ne $null){$lastindex = $args[2]} else{Write-Host "Error: Last index not defined."; errusg}
-if($args[3] -ne $null){$pingcount = $args[3]}
-if($args[4] -ne $null){$timeout = $args[4]}
+if($args[0] -ne $null){$ipbody = $args[0]} else{Write-Host "Error: IP body is not defined."; errusg}
+if($args[1] -ne $null){try{$firstindex = [System.Decimal]::Parse($args[1])}catch{Write-Host "Error: First index is not in correct format."; errusg}} else{Write-Host "Error: First index is not defined."; errusg}
+if($args[2] -ne $null){try{$lastindex = [System.Decimal]::Parse($args[2])}catch{Write-Host "Error: Last index is not in correct format."; errusg}} else{Write-Host "Error: Last index is not defined."; errusg}
+if($args[3] -ne $null){try{$pingcount = [System.Decimal]::Parse($args[3])}catch{Write-Host "Error: Ping count is not in correct format."; errusg}}
+if($args[4] -ne $null){try{$timeout = [System.Decimal]::Parse($args[4])}catch{Write-Host "Error: Timeout is not in correct format."; errusg}}
 
 # Program variables
 $output = ""
